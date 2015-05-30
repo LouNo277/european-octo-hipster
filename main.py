@@ -1,5 +1,8 @@
 # TODO: reduce this file to a minimal working example of usage for sck.
-
+import os
+from xlwings import Workbook, Range
+from SCK import Sample
+from SCK.constants import WORKBOOK_DIR, WORKBOOK_FILE, WORKBOOK_SHEET
 
 def get_file_name():
     current = raw_input('Please enter a filename ...')
