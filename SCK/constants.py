@@ -4,7 +4,7 @@
 import os
 
 WORKBOOK_DIR = r'G:\\Analytical Sciences\\PMAS3\\Structural_Chemistry\\Structure_Checks\\_in-progress\\'
-WORKBOOK_FILE = os.path.join(WORKBOOK_DIR, '201506_RemoteAnalyzerTemplate.xlsm')
+WORKBOOK_FILE = os.path.join(WORKBOOK_DIR, '20150602_MOA1.xlsm')
 WORKBOOK_SHEET = 'Plate'
 
 TARGETS_TEMPLATE = r'G:\\Analytical Sciences\PMAS3\\Structural_Chemistry\\Structure_Checks\\_in-progress\\_scripts\\ACD_ITA\\TARGET_TEMPLATE.xml'
