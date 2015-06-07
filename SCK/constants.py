@@ -3,6 +3,7 @@
 
 import os
 
+# main excel workbook which contains the initial set of data
 WORKBOOK_DIR = os.curdir
 WORKBOOK_FILE = os.path.join(WORKBOOK_DIR, 'default_input.xlsm')
 WORKBOOK_SHEET = 'Plate'
