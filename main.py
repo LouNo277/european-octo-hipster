@@ -1,4 +1,7 @@
-# TODO: reduce this file to a minimal working example of usage for sck.
+"""
+The starting point of all SCK actions is to import initial data and from this
+create `Samples`. Future activities will all use and manipulate those `Samples`.
+"""
 import os
 from xlwings import Workbook, Range
 from SCK import Sample
