@@ -1,13 +1,19 @@
-class Sample(object):
+class Compound(object):
     """
-    A `Sample` is an instance of a chemical `Compound` which undergoes testing.
-    # TODO: Write the parent `Compound` class.
+    A `Compound` is a chemical; it has a name/id, a structure, and a formula.
     """
-
-    def __init__(self, name, formula, fw, label, ms_file, rt=None):
+    def __init__(self, name, formula, fw):
         self.name = name
         self.formula = formula
         self.fw = fw
+
+class Sample(Compound):
+    """
+    A `Sample` is a (physical) instance of a `Compound` which undergoes testing.
+    """
+
+    def __init__(self, name, formula, fw, label, ms_file, rt=None):
+        super(Sample, self).__init__(name, formula, fw)
         self.label = label
         self.ms_file = ms_file
         self.rt = rt
