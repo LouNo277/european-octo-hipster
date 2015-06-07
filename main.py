@@ -15,19 +15,30 @@ def get_file_name():
 
 def get_sample_list(workbook=WORKBOOK_FILE):
     """
-    gets the relevant data for building Samples
+    Gets sample details from excel spreadsheet (one row per sample).
+    :returns: A list in which the data of each row is stored as a separate list.
     """
     wb = Workbook(workbook)
-    sample_list = Range('Plate', 'L3:Q130').value
+    sample_list = Range(WORKBOOK_SHEET, 'L3:Q130').value
+    # TODO: Add a function which determines the correct data range.
+
     print 'Getting Data from ' + str(WORKBOOK_SHEET)
+    wb.close()
+
+    # TODO: Add function which converts lists into dicts with appropriate keys.
     return sample_list
 
 
 def create_samples(sample_list):
+    """
+    This function uses a list of lists for which `Sample` objects are created.
+    :param sample_list: A list of lists which is returned from `get_sample_list`
+    :returns: A list which contains instances of `Sample()`.
+    """
     sample_objects = []
     print 'Creating "Sample" objects ... '
     for li in sample_list:
-        sample_objects.append(Sample(li[0], li[1], li[2], li[3], li[4], li[5]))
+        sample_objects.append(Sample(li[0], li[1], li[2], li[3])
         print li[3]
 
     print str(len(sample_objects)) + ' Samples imported successfully.'
